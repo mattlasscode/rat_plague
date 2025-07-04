@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+#game-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#dash-cooldown {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  background: rgba(30,30,30,0.85);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  z-index: 10;
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: 1px;
+}
+#message-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 40px 60px;
+  border-radius: 16px;
+  font-size: 2.2em;
+  text-align: center;
+  z-index: 20;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+#message-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+#restart-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  padding: 14px 38px;
+  font-size: 1.2em;
+  background: #2ecc40;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 30;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  transition: background 0.2s;
+}
+#restart-btn.hidden {
+  display: none;
+} 
